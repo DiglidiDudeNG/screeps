@@ -1,0 +1,24 @@
+<ganz> How do you folks organize carrying back all the energy from mines?  I've yet to find a scalable pattern.
+[21:53] <unimatrixZero> from mines remote to your room? Lots of people use a bucket-chain to move the energy back
+[22:05] <ganz> Oh, using multiple creeps between a single miner and base? Like dumping at whichever border is closer to the nearest storage?
+[22:13] <NhanH> ganz: you don't need to do that
+[22:14] <NhanH> ganz: what do you mean with "organize" in your question?
+[22:15] <ganz> How many and how to decide which transport picks up from where.  Having one (or more) dedicate transports per mine wasn't really scaling well between near and far mines for me.
+[22:16] <fezeral> how much do your transports carry
+[22:17] <ganz> The new generation is 20 carries and 20 move's
+[22:17] <fezeral> how many steps from miner to drop off ?
+[22:17] <NhanH> ganz: why doesn't dedicated courier works for you?
+[22:20] <ganz> Seems like overkill for near mines and I was having issues keeping up with total creep spawning volume.  If dedicated couriers can work, it might just be be needing to heal old creeps and get my second spawner in the create creep loop.
+[22:20] <NhanH> ah
+[22:20] <ganz> fez - anywhere where 5 to 100+
+[22:20] <ganz> Er, 50+ oneway
+[22:20] <NhanH> with regard to creep spawning volume, it's a universal thing and you just have to wait for RCL 7 and 8 for more spawns
+[22:20] <fezeral> so 100 steps = 200 round trip * 10 energy/tick = 2000 hauler capacity needed
+[22:21] <NhanH> as for the step
+[22:21] <fezeral> thats what my miners do anyway
+[22:21] <NhanH> I have the creep calculate actual number of tick between a trip, config is per source, and increase/decrease courier as needed
+[22:22] <NhanH> creep also suicides if the remaining tick after delivering energy is less than the number of ticks it takes for one round trip
+[22:22] <ganz> Oh neat on the suiciding.
+[22:23] <ganz> Ah, nice.  I was also considering having a pool of transports, have miners dump to floor, and request a worker for each 1k in the resource pile, to have it auto-balance.
+[22:24] <NhanH> redirecting courier around might takes too much time
+[22:24] <NhanH> and pathfinding cpu too

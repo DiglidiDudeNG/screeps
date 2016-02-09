@@ -1,0 +1,25 @@
+{
+  "name": "myscreeps",
+  "version": "1.0.0",
+  "description": "My own screeps scripts.",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiglidiDudeNG/screeps.git"
+  },
+  "keywords": [
+    "screeps"
+  ],
+  "author": "Felix Dion-Robidoux (DiglidiDudeNG)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiglidiDudeNG/screeps/issues"
+  },
+  "homepage": "https://github.com/DiglidiDudeNG/screeps#readme",
+  "dependencies": {
+    
+  }
+}
